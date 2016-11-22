@@ -22,12 +22,11 @@ public class BasketTest{
     apple = new Product("Apple", 25);
     banana = new Product("Banana", 15);
     pineapple = new Product("Pineapple", 100);
-    basket = new ArrayList<Product>();
   }
 
   @Test
   public void hasCustomerName(){
-    assertEquals("Gonzo the Great", basket.getCustomerName);
+    assertEquals("Gonzo the Great", basket.getCustomerName());
   }
 
   
