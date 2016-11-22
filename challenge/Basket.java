@@ -17,6 +17,12 @@ public class Basket {
     return customerName;
   }
 
-  
+  public void putProductInBasket(Product product) {
+    customerBasket.add(product);
+  }
+
+  public int getNumberOfProductsInBasket() {
+    return customerBasket.size();
+  }
 
   }

@@ -29,6 +29,13 @@ public class BasketTest{
     assertEquals("Gonzo the Great", basket.getCustomerName());
   }
 
+  @Test
+  public void canGetNumberOfProdcutsInBasket(){
+    basket.putProductInBasket(orange);
+    basket.putProductInBasket(apple);
+    assertEquals(2, basket.getNumberOfProductsInBasket());
+  }
+
   
 
 }
