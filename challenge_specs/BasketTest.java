@@ -52,6 +52,12 @@ public class BasketTest{
     assertEquals(1, basket.getNumberOfProductsInBasket());
   }
 
+  @Test
+  public void canClearShoppingBasketOfAllProdcuts(){
+    basket.removeAllProductsFromBasket();
+    assertEquals(0, basket.getNumberOfProductsInBasket());
+  }
+
   
 
 }
