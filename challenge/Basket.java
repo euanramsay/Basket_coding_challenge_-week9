@@ -21,6 +21,13 @@ public class Basket {
     customerBasket.add(product);
   }
 
+  public void removeProductFromBasket(Product product) {
+    for (Product item : customerBasket)
+      if (product.equals(item)) {
+        customerBasket.remove(product);
+      }
+  }
+
   public int getNumberOfProductsInBasket() {
     return customerBasket.size();
   }
