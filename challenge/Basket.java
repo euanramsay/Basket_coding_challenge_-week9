@@ -8,11 +8,13 @@ public class Basket {
   private String customerName;
   private boolean loyaltyCard;
   private ArrayList<Product> customerBasket;
+  private double finalCost;
 
   public Basket(String customerName, boolean loyaltyCard){
     this.customerName = customerName;
     this.loyaltyCard = loyaltyCard;
     this.customerBasket = new ArrayList<Product>();
+    this.finalCost = finalCost;
   }
 
   public String getCustomerName() {
@@ -46,6 +48,10 @@ public class Basket {
       }
     }
 
+  public double getFinalCost() {
+    return finalCost;
+  }
+
   public void emptyBasket() {
     customerBasket.clear();
   }
@@ -55,12 +61,12 @@ public class Basket {
       if (item.getIsBogof() == true) {
         item.setCost(item.getCost()/2);
       }
+      finalCost = getTotalCost();
   }
 
   public void applyTenPercentDiscount() {
-    double totalBasketCost = getTotalCost();
-    if (totalBasketCost > 20.0) {
-      totalBasketCost = totalBasketCost * 0.8;
+    if (finalCost > 20.0) {
+      finalCost = finalCost * 0.9;
     }
   }
 

@@ -14,6 +14,7 @@ public class BasketTest{
   Product banana3;
   Product pineapple1;
   Product pineapple2;
+  Product vegBox;
 
   @Before 
   public void before() {
@@ -25,6 +26,7 @@ public class BasketTest{
     banana3 = new Product("Banana", 0.15, false);
     pineapple1 = new Product("Pineapple", 1.00, true);
     pineapple2 = new Product("Pineapple", 1.00, true);
+    vegBox = new Product("Veg Box", 19.95, false);
     basket.putProductInBasket(orange);
     basket.putProductInBasket(apple);
   }
@@ -76,9 +78,20 @@ public class BasketTest{
     basket.putProductInBasket(banana1);
     basket.putProductInBasket(banana2);
     basket.putProductInBasket(banana3);
+    basket.applyBogofDiscount();
     basket.applyTenPercentDiscount();
-    assertEquals(1.00, basket.getTotalCost(), 0.02);
+    assertEquals(1.00, basket.getFinalCost(), 0.02);
   }
+
+  @Test
+  public void canOnlyApplyTenPercentDiscountIfOverTwentyPounds(){
+    basket.putProductInBasket(vegBox);
+    basket.applyBogofDiscount();
+    basket.applyTenPercentDiscount();
+    assertEquals(18.45, basket.getFinalCost(), 0.02);
+  }
+
+
 
 
 
