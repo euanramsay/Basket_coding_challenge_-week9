@@ -7,15 +7,11 @@ import java.util.ArrayList;
 
 public class ProductTest{
   Product orange;
-  Product apple;
-  Product banana;
   Product pineapple;
 
   @Before 
   public void before() {
     orange = new Product("Orange", 0.30, false);
-    apple = new Product("Apple", 0.25, false);
-    banana = new Product("Banana", 0.15, false);
     pineapple = new Product("Pineapple", 1.00, true);
   }
 
@@ -27,9 +23,8 @@ public class ProductTest{
   @Test
   public void canGetIfProductIsBogof(){
     assertEquals(true, pineapple.getIsBogof());
+    assertEquals(false, orange.getIsBogof());
   }
-
-
   
 
 }
