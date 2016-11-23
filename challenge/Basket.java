@@ -50,4 +50,11 @@ public class Basket {
     customerBasket.clear();
   }
 
+  public void applyBogofDiscount() {
+    for (Product item : customerBasket)
+      if (item.getIsBogof() == true) {
+        item.setCost(item.getCost()/2);
+      }
   }
+
+}

@@ -25,5 +25,18 @@ public class Product {
     return bogof;
   }
 
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public void setCost(double cost) {
+    this.cost = cost;
+  }
+
+  public void setIsBogof(boolean bogof) {
+    this.bogof = bogof;
+  }
+
+
 
 }

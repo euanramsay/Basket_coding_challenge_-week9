@@ -9,19 +9,20 @@ public class BasketTest{
   Basket basket;
   Product orange;
   Product apple;
-  Product banana;
-  Product pineapple;
-  Discount bogof;
-  Discount tenPercent;
-  Discount loyaltyCard;
+  Product banana1;
+  Product banana2;
+  Product pineapple1;
+  Product pineapple2;
 
   @Before 
   public void before() {
     basket = new Basket("Gonzo the Great", true);
     orange = new Product("Orange", 0.30, false);
     apple = new Product("Apple", 0.25, false);
-    banana = new Product("Banana", 0.15, false);
-    pineapple = new Product("Pineapple", 1.00, true);
+    banana1 = new Product("Banana", 0.15, false);
+    banana2 = new Product("Banana", 0.15, false);
+    pineapple1 = new Product("Pineapple", 1.00, true);
+    pineapple2 = new Product("Pineapple", 1.00, true);
     basket.putProductInBasket(orange);
     basket.putProductInBasket(apple);
   }
@@ -56,6 +57,16 @@ public class BasketTest{
   public void canEmptyShoppingBasketOfAllProdcuts(){
     basket.emptyBasket();
     assertEquals(0, basket.getNumberOfProductsInBasket());
+  }
+
+  @Test
+  public void canApplyBogofDiscount(){
+    basket.putProductInBasket(banana1);
+    basket.putProductInBasket(banana2);
+    basket.putProductInBasket(pineapple1);
+    basket.putProductInBasket(pineapple2);
+    basket.applyBogofDiscount();
+    assertEquals(1.85, basket.getTotalCost(), 0.2);
   }
 
   
