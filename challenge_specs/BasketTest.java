@@ -36,6 +36,13 @@ public class BasketTest{
     assertEquals(2, basket.getNumberOfProductsInBasket());
   }
 
+  @Test
+  public void canGetTotalCostOfProdcutsInBasket(){
+    basket.putProductInBasket(orange);
+    basket.putProductInBasket(apple);
+    assertEquals(55, basket.getTotalCost());
+  }
+
   
 
 }

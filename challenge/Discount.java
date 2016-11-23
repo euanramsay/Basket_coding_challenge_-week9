@@ -4,7 +4,7 @@ import java.util.Collections;
 
 public class Discount {
   private String name;
-  private int percentageDiscount;
+  private Double percentageDiscount;
 
   public Discount(String name){
     this.name = name;

@@ -25,4 +25,12 @@ public class Basket {
     return customerBasket.size();
   }
 
+  public int getTotalCost() {
+    int totalCost = 0;
+    for (Product item : customerBasket)
+      totalCost = totalCost + item.getCost(); {
+        return totalCost;
+      }
+    }
+
   }
