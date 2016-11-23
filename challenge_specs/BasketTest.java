@@ -68,16 +68,16 @@ public class BasketTest{
     basket.putProductInBasket(pineapple1);
     basket.putProductInBasket(pineapple2);
     basket.applyBogofDiscount();
-    assertEquals(1.85, basket.getTotalCost(), 0.2);
+    assertEquals(1.85, basket.getTotalCost(), 0.02);
   }
 
   @Test
-  public void canApplyTwentyPercentDiscount(){
+  public void canOnlyApplyTenPercentDiscountIfUnderTwentyPounds(){
     basket.putProductInBasket(banana1);
     basket.putProductInBasket(banana2);
     basket.putProductInBasket(banana3);
-    basket.applyBogofDiscount();
-    assertEquals(0.80, basket.getTotalCost(), 0.2);
+    basket.applyTenPercentDiscount();
+    assertEquals(1.00, basket.getTotalCost(), 0.02);
   }
 
 
