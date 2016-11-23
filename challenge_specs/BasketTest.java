@@ -53,8 +53,8 @@ public class BasketTest{
   }
 
   @Test
-  public void canClearShoppingBasketOfAllProdcuts(){
-    basket.removeAllProductsFromBasket();
+  public void canEmptyShoppingBasketOfAllProdcuts(){
+    basket.emptyBasket();
     assertEquals(0, basket.getNumberOfProductsInBasket());
   }
 

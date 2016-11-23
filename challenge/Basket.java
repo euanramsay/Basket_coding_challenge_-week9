@@ -46,7 +46,7 @@ public class Basket {
       }
     }
 
-  public void removeAllProductsFromBasket() {
+  public void emptyBasket() {
     customerBasket.clear();
   }
 
