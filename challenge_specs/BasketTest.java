@@ -17,14 +17,13 @@ public class BasketTest{
 
   @Before 
   public void before() {
-    basket = new Basket("Gonzo the Great");
-    orange = new Product("Orange", 30);
-    apple = new Product("Apple", 25);
-    banana = new Product("Banana", 15);
-    pineapple = new Product("Pineapple", 100);
+    basket = new Basket("Gonzo the Great", true);
+    orange = new Product("Orange", 30, false);
+    apple = new Product("Apple", 25, false);
+    banana = new Product("Banana", 15, false);
+    pineapple = new Product("Pineapple", 100, true);
     basket.putProductInBasket(orange);
     basket.putProductInBasket(apple);
-
   }
 
   @Test

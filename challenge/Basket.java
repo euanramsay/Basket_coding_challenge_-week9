@@ -6,10 +6,12 @@ import java.util.ArrayList;
 
 public class Basket {
   private String customerName;
+  private boolean loyaltyCard;
   private ArrayList<Product> customerBasket;
 
-  public Basket(String customerName){
+  public Basket(String customerName, boolean loyaltyCard){
     this.customerName = customerName;
+    this.loyaltyCard = loyaltyCard;
     this.customerBasket = new ArrayList<Product>();
   }
 
