@@ -4,10 +4,10 @@ import java.util.Collections;
 
 public class Product {
   private String name;
-  private int cost;
+  private double cost;
   private boolean bogof;
 
-  public Product(String name, int cost, boolean bogof){
+  public Product(String name, double cost, boolean bogof){
     this.name = name;
     this.cost = cost;
     this.bogof = bogof;
@@ -17,7 +17,7 @@ public class Product {
     return name;
   }
 
-  public int getCost() {
+  public double getCost() {
     return cost;
   }
 

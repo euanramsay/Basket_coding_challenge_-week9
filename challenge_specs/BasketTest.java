@@ -18,10 +18,10 @@ public class BasketTest{
   @Before 
   public void before() {
     basket = new Basket("Gonzo the Great", true);
-    orange = new Product("Orange", 30, false);
-    apple = new Product("Apple", 25, false);
-    banana = new Product("Banana", 15, false);
-    pineapple = new Product("Pineapple", 100, true);
+    orange = new Product("Orange", 0.30, false);
+    apple = new Product("Apple", 0.25, false);
+    banana = new Product("Banana", 0.15, false);
+    pineapple = new Product("Pineapple", 1.00, true);
     basket.putProductInBasket(orange);
     basket.putProductInBasket(apple);
   }
@@ -43,7 +43,7 @@ public class BasketTest{
 
   @Test
   public void canGetTotalCostOfProductsInBasket(){
-    assertEquals(55, basket.getTotalCost());
+    assertEquals(0.55, basket.getTotalCost(), 0.2);
   }
 
   @Test
