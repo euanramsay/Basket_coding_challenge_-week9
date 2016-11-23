@@ -24,6 +24,11 @@ public class ProductTest{
     assertEquals("Orange", orange.getName());
   }
 
+  @Test
+  public void canGetIfProductIsBogof(){
+    assertEquals(true, pineapple.getIsBogof());
+  }
+
 
   
 
