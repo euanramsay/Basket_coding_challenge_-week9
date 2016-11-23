@@ -70,4 +70,10 @@ public class Basket {
     }
   }
 
+  public void applyTwoPercentDiscount() {
+    if (loyaltyCard == true) {
+      finalCost = finalCost * 0.98;
+    }
+  }
+
 }
