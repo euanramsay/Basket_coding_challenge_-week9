@@ -27,8 +27,13 @@ public class BasketTest{
   }
 
   @Test
-  public void hasCustomerName(){
+  public void canGetCustomerName(){
     assertEquals("Gonzo the Great", basket.getCustomerName());
+  }
+
+  @Test
+  public void canGetIsCusomerLoyaltyCardHolder(){
+    assertEquals(true, basket.getCustomerLoyalyCardStatus());
   }
 
   @Test

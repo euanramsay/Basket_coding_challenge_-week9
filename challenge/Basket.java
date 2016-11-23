@@ -19,6 +19,10 @@ public class Basket {
     return customerName;
   }
 
+  public boolean getCustomerLoyalyCardStatus() {
+    return loyaltyCard;
+  }
+
   public void putProductInBasket(Product product) {
     customerBasket.add(product);
   }
