@@ -11,6 +11,7 @@ public class BasketTest{
   Product apple;
   Product banana1;
   Product banana2;
+  Product banana3;
   Product pineapple1;
   Product pineapple2;
 
@@ -21,6 +22,7 @@ public class BasketTest{
     apple = new Product("Apple", 0.25, false);
     banana1 = new Product("Banana", 0.15, false);
     banana2 = new Product("Banana", 0.15, false);
+    banana3 = new Product("Banana", 0.15, false);
     pineapple1 = new Product("Pineapple", 1.00, true);
     pineapple2 = new Product("Pineapple", 1.00, true);
     basket.putProductInBasket(orange);
@@ -68,6 +70,17 @@ public class BasketTest{
     basket.applyBogofDiscount();
     assertEquals(1.85, basket.getTotalCost(), 0.2);
   }
+
+  @Test
+  public void canApplyTwentyPercentDiscount(){
+    basket.putProductInBasket(banana1);
+    basket.putProductInBasket(banana2);
+    basket.putProductInBasket(banana3);
+    basket.applyBogofDiscount();
+    assertEquals(0.80, basket.getTotalCost(), 0.2);
+  }
+
+
 
   
 

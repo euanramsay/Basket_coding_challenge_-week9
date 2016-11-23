@@ -57,4 +57,11 @@ public class Basket {
       }
   }
 
+  public void applyTenPercentDiscount() {
+    double totalBasketCost = getTotalCost();
+    if (totalBasketCost > 20.0) {
+      totalBasketCost = totalBasketCost * 0.8;
+    }
+  }
+
 }
